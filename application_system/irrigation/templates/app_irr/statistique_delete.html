@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!--FontAwesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+    <!--Chartjs CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    {% include 'navbar.html'%} 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 mx-auto p-4">
+           <div class="card shadow shadow-lg">
+                <div class="card-body">
+                    <h3 class="text-success">Supprimer  votre statistique?</h3>
+                    <div class="mt-4">
+                        
+                        <a href="{% url 'statistique_delete' %}?sid={{stati.id}}&&action=confirm" class="btn btn-success">Supprimer</a>
+                       
+                        <a href="{% url 'show_address_static' %}" class="btn btn-secondary">Annuler</a>
+                         
+                    </div>
+                </div>
+           </div>           
+        </div>
+    </div>
+</div>
+{% if status %}
+<script>
+    alert("{{status}}");
+    window.location = "/show_address_static"
+</script>
+{% endif %}
+</body>
+</html>

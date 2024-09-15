@@ -1,0 +1,33 @@
+{%extends 'navbar.html'%}
+{% load static %}
+      {%block content%}
+      <div id="abc" class="abc"> 
+        {% for message in messages %}
+        <strong>{{ message }}</strong>
+        {% endfor %}    
+        <nav>
+             <a class="navbar-brand" href="#">
+                 <img src="{% static 'images/logo.png' %}" alt="" width="120" height="60" class="d-inline-block align-text-top">
+             </a>
+             <ul>
+                <li><a href="#">Irrigation</a></li>
+                <li><a href="#">Home</a></li>
+              
+             </ul>  
+        </nav>
+      
+    <br>
+    <br>
+    <center>
+    <br><br><br> <br>
+    <h2>Irrigation automatique</h2>
+    <br><br><br><br><br><br><br>
+      <div class="pageindex">
+      <button type="submit"  class="submit" ><a href="/register">S'inscrire</a></button>
+      <button type="submit" class="submit"><a href="/login" > Se connecter</a></button></div>
+      
+    
+    </center> 
+</div>
+
+{%endblock%}
