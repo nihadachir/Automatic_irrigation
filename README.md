@@ -1,2 +1,3 @@
 # Automatic_irrigation
-This project implements a Data Visualization solution for an irrigation system using a machine learning model. Developed in Python with Django.
+
+This project aims to implement a Data Visualization solution for an irrigation system based on a machine learning model. The project is developed in Python using the Django framework to visualize and analyze data using the machine learning model. The first part involves creating a user interface with an identification space, a dashboard displaying data visualization and reporting, and a historical overview of data stored in the database. The second part focuses on predicting statistical data recorded in the database every hour using short-term and long-term time-series LSTM recurrent neural networks.
